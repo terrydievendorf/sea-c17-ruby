@@ -10,9 +10,9 @@
 # Chapter 2:  Numbers                        page  9
 # Chapter 3:  Letters                        page 13
 
-# Various ways to store the data, but this is the way I chose since we haven't covered more
-# sophisticated data structures yet.
-heading = "Table of Contents"
+# There are various ways to store the data, but this is the way I chose since we 
+# haven't covered more sophisticated data structures yet.
+heading = 'Table of Contents'
 chapters = ['Chapter 1: Getting Started','Chapter 2: Numbers','Chapter 3: Letters']
 pages = ['1','9','13'] 
 
@@ -28,5 +28,5 @@ puts heading.center linewidth
 
 # Enumerate the chapters and format the output
 chapters.each_with_index do |chapters,index|
-  puts chapters.ljust(linewidth/2) + "page ".rjust(linewidth/2) + pages[index].rjust(maxpagenumberchars)
+  puts chapters.ljust(linewidth/2) + 'page '.rjust(linewidth/2) + pages[index].rjust(maxpagenumberchars)
 end

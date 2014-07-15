@@ -5,7 +5,9 @@
 # example, if you type in I want a raise, it should yell back like this:
 #
 # WHADDAYA MEAN "I WANT A RAISE"?!? YOU'RE FIRED!!
-puts "So, what do you want?"
+puts 'So, what do you want?'
 STDOUT.flush
 response = gets.chomp
-puts "WHADDAYA MEAN \"" + response + "\"?!? YOU\'RE FIRED!!"
+# Alternate way to do this using double quotes...
+# puts "WHADDAYA MEAN \"" + response + "\"?!? YOU\'RE FIRED!!"
+puts 'WHADDAYA MEAN "' + response + '"?!? YOU\'RE FIRED!!'
