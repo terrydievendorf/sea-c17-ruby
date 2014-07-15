@@ -1,3 +1,8 @@
+#### List current git config settings
+
+git config -l
+
+
 #### push.default
 
 # Push the current branch to a remote branch of the same name without specifying
@@ -21,6 +26,11 @@ git config --global credential.helper cache
 
 # Linux: Save your password in memory for 1 hour (i.e. 3600 seconds).
 git config --global credential.helper 'cache --timeout=3600'
+
+
+#### List current git aliases
+
+git alias
 
 
 #### alias.df
