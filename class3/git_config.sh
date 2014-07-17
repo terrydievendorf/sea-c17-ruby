@@ -38,3 +38,13 @@ git config --global alias.df 'diff HEAD'
 
 # View the changes you staged for the next commit relative the last commit.
 git config --global alias.dfs 'diff --staged'
+
+
+#### color.diff
+
+# Use customized color for diff output
+git config --global color.diff.frag 'magenta bold'
+git config --global color.diff.func 'normal bold'
+git config --global color.diff.meta 'yellow bold'
+git config --global color.diff.new 'green bold'
+git config --global color.diff.old 'red bold'
