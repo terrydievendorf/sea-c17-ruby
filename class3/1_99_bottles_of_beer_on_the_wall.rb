@@ -15,3 +15,16 @@
 # Take one down, pass it around, no more bottles of beer on the wall!
 
 # Starting off with a loop...
+original_bottle_count = 99
+current_bottle_count = original_bottle_count
+while current_bottle_count > 1
+  puts "#{current_bottle_count} bottles of beer on the wall," +
+    " #{current_bottle_count} bottles of beer!"
+  puts "Take one down, pass it around, " + 
+    "#{current_bottle_count-1}" 
+  print current_bottle_count-1 == 1 ? " bottle" : " bottles" 
+  puts  " of beer on the wall!"
+  current_bottle_count -= 1
+end
+puts "1 bottle of beer on the wall, 1 bottle of beer!\n" +
+  "Take one down and pass it around, no more bottles of beer on the wall!"
