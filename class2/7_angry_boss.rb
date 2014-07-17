@@ -7,8 +7,7 @@
 #
 # WHADDAYA MEAN "I WANT A RAISE"?!? YOU'RE FIRED!!
 puts 'So, what do you want?'
-STDOUT.flush
-response = gets.chomp
+response = gets.chomp.upcase
 # Alternate way to do this using double quotes...
 # puts "WHADDAYA MEAN \"" + response + "\"?!? YOU\'RE FIRED!!"
 puts 'WHADDAYA MEAN "' + response + '"?!? YOU\'RE FIRED!!'
