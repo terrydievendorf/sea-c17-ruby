@@ -28,11 +28,6 @@ git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=3600'
 
 
-#### List current git aliases
-
-git alias
-
-
 #### alias.df
 
 # View the changes in your working tree relative to the last commit.
