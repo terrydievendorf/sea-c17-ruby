@@ -10,7 +10,7 @@ not true
 !true
 ```
 
-#### Favor modifier `if/unless` usage when you have a single-line body
+#### Favor modifier usage of `if/unless` when you have a single-line body
 
 ```ruby
 # bad
@@ -53,7 +53,7 @@ else
 end
 ```
 
-#### Always put the condition on the same line as the `if/unless` in a multi-line conditional
+#### Always put the condition on the same line as the `if/unless`
 
 ```ruby
 # bad
@@ -84,7 +84,7 @@ if chapter == 8
 end
 ```
 
-#### Favor modifier `while/until` usage when you have a single-line body
+#### Favor modifier usage of `while/until` when you have a single-line body
 
 ```ruby
 # bad
@@ -109,7 +109,7 @@ do_something while not some_condition
 do_something until some_condition
 ```
 
-#### Always put the condition on the same line as the `while/until` in a multi-line conditional
+#### Always put the condition on the same line as the `while/until`
 
 ```ruby
 # bad
