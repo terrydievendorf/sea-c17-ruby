@@ -23,7 +23,7 @@ while current_bottle_count > 1
   puts "Take one down, pass it around, " + 
     "#{current_bottle_count-1}" 
   print current_bottle_count-1 == 1 ? " bottle" : " bottles" 
-  puts  " of beer on the wall!"
+  puts " of beer on the wall!"
   current_bottle_count -= 1
 end
 puts "1 bottle of beer on the wall, 1 bottle of beer!\n" +
