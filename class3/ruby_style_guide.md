@@ -96,7 +96,7 @@ end
 do_something while some_condition
 ```
 
-#### Favor `until` over `while` for negative conditions.
+#### Favor `until` over `while` for negative conditions
 
 ```ruby
 # bad
@@ -148,6 +148,7 @@ while true
   do_something
 end
 
+# bad
 until false
   do_something
 end
@@ -161,6 +162,11 @@ end
 #### For post-loop tests, use `loop` with `break` rather than `begin/end while/until`
 
 ```ruby
+# bad
+begin
+  input = gets.chomp
+end while input != "stop"
+
 # bad
 begin
   input = gets.chomp
