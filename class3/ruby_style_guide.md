@@ -53,20 +53,6 @@ else
 end
 ```
 
-#### Never use `then` for multi-line `if/unless`
-
-```ruby
-# bad
-if some_condition then
-  # body omitted
-end
-
-# good
-if some_condition
-  # body omitted
-end
-```
-
 #### Always put the condition on the same line as the `if/unless` in a multi-line conditional
 
 ```ruby
@@ -88,12 +74,12 @@ end
 
 ```ruby
 # bad
-if (x > 10)
+if (chapter == 8)
   # body omitted
 end
 
 # good
-if x > 10
+if chapter == 8
   # body omitted
 end
 ```
@@ -123,20 +109,6 @@ do_something while not some_condition
 do_something until some_condition
 ```
 
-#### Never use `do` for multi-line `while/until`
-
-```ruby
-# bad
-while x > 5 do
-  # body omitted
-end
-
-# good
-while x > 5
-  # body omitted
-end
-```
-
 #### Always put the condition on the same line as the `while/until` in a multi-line conditional
 
 ```ruby
@@ -158,12 +130,12 @@ end
 
 ```ruby
 # bad
-while (x > 10)
+while (chapter < 15)
   # body omitted
 end
 
 # good
-while x > 10
+while chapter < 15
   # body omitted
 end
 ```
