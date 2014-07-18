@@ -16,13 +16,18 @@
 
 original_bottle_count = 99
 current_bottle_count = original_bottle_count
+
 while current_bottle_count > 1
-  puts "#{current_bottle_count} bottles of beer on the wall," +
-    " #{current_bottle_count} bottles of beer!"
-  puts "Take one down, pass it around, " + 
-    "#{current_bottle_count-1}" + " bottle" + (current_bottle_count-1 == 1 ? "" : "s") + " of beer on the wall!\n"
+  puts "#{current_bottle_count} bottles of beer on the wall, " +
+    "#{current_bottle_count} bottles of beer!"
+
+  puts "Take one down, pass it around, " +
+    "#{current_bottle_count - 1}" + " bottle" +
+    (current_bottle_count - 1 == 1 ? "" : "s") + " of beer on the wall!\n"
+
   current_bottle_count -= 1
 end
+
 puts "1 bottle of beer on the wall, 1 bottle of beer!"
 puts "Take one down, pass it around, no more bottles of beer on the wall!"
 puts "No more bottles of beer on the wall, no more bottles of beer!"
