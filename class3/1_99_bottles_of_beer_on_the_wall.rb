@@ -25,7 +25,7 @@ while current_bottle_count > 1
   puts " of beer on the wall!"
   current_bottle_count -= 1
 end
-puts "1 bottle of beer on the wall, 1 bottle of beer!\n" +
-  "Take one down and pass it around, no more bottles of beer on the wall!"
+puts "1 bottle of beer on the wall, 1 bottle of beer!"
+puts "Take 1 down and pass it around, no more bottles of beer on the wall!"
 puts "No more bottles of beer on the wall, no more bottles of beer!"
 puts "Go to the store and buy some more, 99 bottles of beer on the wall!"
