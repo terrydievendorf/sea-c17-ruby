@@ -14,7 +14,6 @@
 # 1 bottle of beer on the wall, 1 bottle of beer!
 # Take one down, pass it around, no more bottles of beer on the wall!
 
-# Starting off with a loop...
 original_bottle_count = 99
 current_bottle_count = original_bottle_count
 while current_bottle_count > 1
@@ -28,3 +27,5 @@ while current_bottle_count > 1
 end
 puts "1 bottle of beer on the wall, 1 bottle of beer!\n" +
   "Take one down and pass it around, no more bottles of beer on the wall!"
+puts "No more bottles of beer on the wall, no more bottles of beer!"
+puts "Go to the store and buy some more, 99 bottles of beer on the wall!"
