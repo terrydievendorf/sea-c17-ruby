@@ -156,7 +156,7 @@ Download [Sublime Text 2](http://www.sublimetext.com/2) and drag the app icon in
 Then run the following command:
 
 ```
-echo 'alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"' >> ~/.bash_profile
+ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
 echo 'export EDITOR="subl -w"' >> ~/.bash_profile
 
