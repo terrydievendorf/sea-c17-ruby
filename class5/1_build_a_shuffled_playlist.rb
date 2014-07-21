@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 #
-# Section 11.8 on page 92
 # 4 points
 #
 # Building a playlist is easy. It’s just a regular text file where each line is
@@ -19,7 +18,16 @@
 # Then open the playlist.m3u file in either iTunes or VLC. I'll be testing the
 # playlist to ensure it actually works.
 #
-# Hint: Here's what I expect the program to output to the shell:
+# Here's what the program should output to the shell:
 #
-#   $ ruby 1_build_your_own_playlist.rb
-#   Generating a shuffled playlist of 16 songs => complete!
+#   $ ruby 1_build_a_shuffled_playlist.rb
+#   => Build a shuffled playlist
+#   => Created playlist.m3u with 16 songs
+#
+# A method you might find useful:
+#
+#   Dir[pattern] → Array
+#
+#     Using a pattern String, return an Array of file paths that match.
+#
+#     Dir["code/*.{rb,js}"]  #=> ["code/file1.rb", "code/file2.js"]
