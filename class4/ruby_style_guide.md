@@ -80,7 +80,7 @@ item # => 99
 ```ruby
 # bad
 [1, 2, 3].each do |item|
-  if item == 2 && item == 3
+  if item == 2 || item == 3
     puts item
   end
 end
