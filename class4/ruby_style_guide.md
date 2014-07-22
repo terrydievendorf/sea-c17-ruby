@@ -80,14 +80,14 @@ item # => 99
 ```ruby
 # bad
 [1, 2, 3].each do |item|
-  if item == 2 || item == 3
+  if item >= 2
     puts item
   end
 end
 
 # good
 [1, 2, 3].each do |item|
-  next if item == 1
+  next if item < 2
   puts item
 end
 ```
