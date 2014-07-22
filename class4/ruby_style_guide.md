@@ -136,6 +136,12 @@ some_method(42)
 #### Omit parentheses when defining methods without parameters
 
 ```ruby
+# bad
+def some_method()
+ # body omitted
+end
+
+# good
 def some_method
  # body omitted
 end
@@ -145,6 +151,12 @@ end
 #### Use parentheses when defining methods with parameters
 
 ```ruby
+# bad
+def some_method param1, param2
+ # body omitted
+end
+
+# good
 def some_method(param1, param2)
  # body omitted
 end
