@@ -64,3 +64,35 @@
 #           for writing.
 
 # your code here
+
+
+if ARGV.empty?
+  puts "Usage: 2_build_shuffled_playlist_extended.rb PLAYLIST"
+  exit
+end
+
+playlist_name = ARGV[0].end_with?(".m3u") ? ARGV[0] : ARGV[0] + ".m3u"
+puts "Build a shuffled playlist"
+mode = "w"
+if File.exists?(playlist_name) 
+  puts "WARNING: #{playlist_name} already exists"
+  print "(c)ancel, (o)verwrite, or (a)ppend > "
+  action = $stdin.gets.chomp
+  puts "Canceled" if action == "c"
+  exit if action == "c"
+  mode = "a" if action == "a"
+  print "Appended" if action == "a"
+  print "Overwrote" if action == "o"
+else
+  print "Created"
+end
+music_list = []
+music_list =  Dir["songs/*.{mp3,m4a}"]
+music_list.shuffle!
+File.open(playlist_name, mode) do |f|
+  music_list.each do |song|
+    f.write song + "\n"
+  end
+end
+print " #{playlist_name} with #{music_list.length} songs"
+puts

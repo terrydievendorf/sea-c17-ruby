@@ -46,3 +46,19 @@
 require "fileutils"
 
 # your code here
+
+if ARGV.length != 2 then
+  puts "Usage: 3_rename_your_photos.rb SOURCE TARGET"
+  exit
+end
+
+source_dir = ARGV[0].end_with?("/")?ARGV[0]:ARGV[0]+"/"
+target_dir = ARGV[1].end_with?("/")?ARGV[1]:ARGV[1]+"/"
+picture_list = []
+picture_list = Dir["#{source_dir}" + "*.jpg"]
+picture_list.each do |f|
+  target_file = target_dir + File.basename(f, ".jpg") + "_" + File.size(f).to_s + ".jpg"
+  FileUtils.copy_file(f,target_file)
+end
+puts "Copied #{picture_list.length} photos from source to target"
+
