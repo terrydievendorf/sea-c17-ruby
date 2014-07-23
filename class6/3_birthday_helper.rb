@@ -14,7 +14,7 @@
 # The program should also handle names that are not capitalized:
 #
 #   $ ruby 3_birthday_helper.rb jane
-#   Jane will be 58 on 2014-03-27
+#   Jane will be 56 on 2015-03-27
 #
 # And reject names that don't have a birth date:
 #
