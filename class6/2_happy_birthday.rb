@@ -59,7 +59,9 @@
 #     hi
 #     hi
 
-year, month, day = ARGV
+year = ARGV[0].to_i
+month = ARGV[1].to_i
+day = ARGV[2].to_i
 
 unless year && month && day
   puts "Usage: 2_happy_birthday.rb YEAR MONTH DAY"
