@@ -2,7 +2,8 @@
 #
 # 4 points
 #
-# Write a program that writes names and birth dates back to birth_dates.yml.
+# Write a program that reads birth_dates.yml, creates or updates a name and
+# birth date entry, and then saves ALL the birth dates back to birth_dates.yml.
 #
 # For example:
 #
@@ -21,8 +22,6 @@
 #
 #   $ ruby 3_birthday_helper_read.rb Frank
 #   Frank will be 71 on 2015-01-29
-#
-# Hint: Represent a birth date as a Time on midnight in UTC.
 #
 # A few methods that may help you:
 #
