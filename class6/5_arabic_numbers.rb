@@ -86,9 +86,37 @@
 #
 #     "".empty?   #=> true
 #     "a".empty?  #=> false
+require('pp')
 
 def arabic_number(num)
-  # your code here
+  num = num.upcase
+  value = 0
+  roman_numerals = { 
+  'M'  => 1000, 
+  'CM' => 900,
+  'D'  => 500,
+  'CD' => 400,
+  'C'  => 100,
+  'XC' => 90,
+  'L'  => 50,
+  'XL' => 40,
+  'X'  => 10,
+  'IX' => 9,
+  'V'  => 5,
+  'IV' => 4,
+  'I'  => 1}
+  
+  roman_numerals.each do |roman,arabic|
+    while num.start_with?(roman) 
+      value += arabic
+      num = num[roman.length,num.length]
+    end
+  end
+  if value == 0 || num.length > 0
+    puts "Invalid roman numeral"
+    return
+  end
+  value
 end
 
 class String

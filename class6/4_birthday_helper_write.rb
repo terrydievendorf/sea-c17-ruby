@@ -41,6 +41,7 @@
 #     YAML.dump("foo")                #=> "--- foo\n...\n"
 #     YAML.dump({ "foo" => "bar" })   #=> "---\nfoo: bar\n"
 
+require 'pp'
 require 'yaml'
 
 name = ARGV[0]
@@ -54,3 +55,21 @@ if name.nil? || year == 0 || month == 0 || day == 0
 end
 
 # your code here
+
+date = Time.new(year,month,day,0,0,0,"+00:00").utc
+birth_dates = YAML.load_file("birth_dates.yml")
+updated = false
+birth_dates.each do |db_name,db_date|
+  if db_name == name.capitalize then
+    birth_dates[db_name] = date
+    puts "Birthday #{date} saved for #{db_name}"
+    updated = true
+  end
+end
+if !updated
+  birth_dates[name.capitalize] = date
+  puts "Birthday #{date} saved for #{name.capitalize}"
+end
+
+File.open("birth_dates.yml", "w") {|f| f.write(birth_dates.to_yaml) }
+

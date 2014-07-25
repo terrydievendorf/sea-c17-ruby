@@ -45,6 +45,7 @@
 #     Time.new.utc.strftime("%F")   #=> "2014-07-23"
 
 require 'yaml'
+require 'pp'
 
 name = ARGV.first
 
@@ -54,3 +55,11 @@ if name.nil?
 end
 
 # your code here
+birth_dates = YAML.load_file("birth_dates.yml")
+birth_dates.each do |a_name,date|
+  if a_name == name.capitalize then
+    age = ((Time.now - date) / 365 / 24 / 60 / 60).ceil
+    next_birthday = Time.utc(Time.now.year,date.month,date.day)
+    puts "#{a_name} will be #{age} on #{next_birthday.strftime("%F")}"
+  end
+end

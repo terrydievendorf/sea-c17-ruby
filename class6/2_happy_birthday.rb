@@ -69,3 +69,6 @@ if year == 0 || month == 0 || day == 0
 end
 
 # your code here
+birth_date = Time.utc(year, month, day)
+puts "CHEER!\n" * ((Time.now - birth_date) / (365 * 24 * 60 *60))
+
