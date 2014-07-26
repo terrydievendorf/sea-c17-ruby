@@ -23,42 +23,38 @@
 #   IX
 
 def modern_roman_numeral(num)
-  # your solution here
-  thousands = num / 1000
-  hundreds = num % 1000 / 100
-  tens = num % 100 / 10
-  ones = num % 10
-  roman_numeral = "M" * thousands
-  if hundreds == 9
-    roman_numeral += "CM"
-  elsif hundreds == 4
-    roman_numeral += "CD"
-  else
-    roman_numeral += "D" * (num % 1000 / 500)
-    roman_numeral += "C" * (num % 500 / 100)
+  arabics_to_romans = [
+    [1000, "M"],
+    [900, "CM"],
+    [500, "D"],
+    [400, "CD"],
+    [100, "C"],
+    [90, "XC"],
+    [50, "L"],
+    [40, "XL"],
+    [10, "X"],
+    [9, "IX"],
+    [5, "V"],
+    [4, "IV"],
+    [1, "I"]
+  ]
+
+  answer = []
+
+  arabics_to_romans.each do |arabic_to_roman|
+    arabic = arabic_to_roman.first
+    roman = arabic_to_roman.last
+
+    quotient = num / arabic
+    next if quotient == 0
+
+    answer.push(roman * quotient)
+    num %= arabic
   end
 
-  if tens == 9
-    roman_numeral += "XC"
-  elsif tens == 4
-    roman_numeral += "XL"
-  else
-    roman_numeral += "L" * (num % 100 / 50)
-    roman_numeral += "X" * (num % 50 / 10)
-  end
-
-  if ones == 9
-    roman_numeral += "IX"
-  elsif ones == 4
-    roman_numeral += "IV"
-  else
-    roman_numeral += "V" * (num % 10 / 5)
-    roman_numeral += "I" * (num % 5 / 1)
-  end
-
-  roman_numeral
-
+  answer.join
 end
+
 input = ARGV[0].to_i
 
 if input <= 0 || input > 3000

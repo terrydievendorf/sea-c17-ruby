@@ -15,16 +15,20 @@
 # Chapter 3:  Letters                        page 13
 
 heading = 'Table of Contents'
-chapters = [['Getting Started',1],['Numbers',9],['Letters',13]]
-linewidth = 50
+
+chapters = [
+  ['Getting Started', "page  1"],
+  ['Numbers', "page  9"],
+  ['Letters', "page 13"]
+]
 
 puts
-puts heading.center linewidth
+puts heading.center(50)
 puts
-chapters.each_with_index do |chapter_info, index|
-  chapter_name, page_num = chapter_info
-  chapter_index = index + 1
-left_side = "Chapter #{chapter_index}: #{chapter_name}"
-right_side = "page #{page_num}"
-puts left_side.ljust(30) + right_side.rjust(20)
+
+chapters.each_with_index do |chapter, index|
+  chapter_name, right_side = chapter
+  left_side = "Chapter #{index + 1}:  #{chapter_name}"
+
+  puts left_side.ljust(30) + right_side.rjust(20)
 end
