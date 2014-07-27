@@ -15,10 +15,10 @@
 # described on page 75, to mix up the list of paths before saving them to the
 # playlist.m3u file.
 #
-# Then open the playlist.m3u file in either iTunes or VLC. I'll be testing the
+# Then open the playlist.m3u file in either iTunes or VLC. I"ll be testing the
 # playlist to ensure it actually works.
 #
-# Here's what the program should output to the shell:
+# Here"s what the program should output to the shell:
 #
 #   $ ruby 1_build_a_shuffled_playlist.rb
 #   => Build a shuffled playlist
@@ -32,13 +32,12 @@
 #
 #     Dir["code/*.{rb,js}"]  #=> ["code/file1.rb", "code/file2.js"]
 
-puts "Build a shuffled playlist"
-music_list = []
-music_list =  Dir["songs/*.{mp3,m4a}"]
-music_list.shuffle!
-File.open 'playlist.m3u', 'w' do |f|
-  music_list.each do |song|
-    f.write song + "\n"
-  end
+puts "=> Build a shuffled playlist"
+
+songs =  Dir["songs/*.{mp3,m4a}"].shuffle
+
+File.open("playlist.m3u", "w") do |f|
+  songs.each { |song| f.write song + "\n" }
 end
-puts "Created playlist.m3u with #{music_list.length} songs"
+
+puts "=> Created playlist.m3u with #{songs.length} songs"
