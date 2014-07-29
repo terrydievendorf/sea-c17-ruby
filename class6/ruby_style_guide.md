@@ -100,15 +100,19 @@ some_hash.size
 ```
 
 
-#### Name the parameters `k` and `v` for single-line blocks
+#### Prefer `{...}` over `do...end` for single-line iterator blocks
 
 ```ruby
 # bad
-some_hash.each { |key, value| puts key + value }
+{ "one" => 1, "two" => 2 }.each do |key, value|
+  puts key + value
+end
 
 # good
-some_hash.each { |k, v| puts k + v }
+{ "one" => 1, "two" => 2 }.each { |k, v| puts k + v }
 ```
+
+**Also name the parameters `k` and `v` for single-line iterator blocks**
 
 
 #### Use `_` for unused block parameters
@@ -119,6 +123,41 @@ some_hash.each { |k, v| puts v }
 
 # good
 some_hash.each { |_, v| puts v }
+```
+
+#### Use `next` to prematurely skip to the next iteration
+
+```ruby
+# bad
+{ "one" => 1, "two" => 2, "three" => 3 }.each do |key, value|
+  if value >= 2
+    puts key
+  end
+end
+
+# good
+{ "one" => 1, "two" => 2, "three" => 3 }.each do |key, value|
+  next if value < 2
+  puts key
+end
+```
+
+
+#### Use `break` to prematurely exit an iterator
+
+```ruby
+# bad
+{ "one" => 1, "two" => 2, "three" => 3 }.each do |key, value|
+  if value < 2
+    puts key
+  end
+end
+
+# good
+{ "one" => 1, "two" => 2, "three" => 3 }.each do |key, value|
+  break if value >= 2
+  puts key
+end
 ```
 
 

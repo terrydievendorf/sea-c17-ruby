@@ -24,13 +24,15 @@ some_array[42]
 
 ```ruby
 # bad
-[1, 2, 3].each do |num|
-  puts num
+[1, 2, 3].each do |element|
+  puts element
 end
 
 # good
-[1, 2, 3].each { |num| puts num }
+[1, 2, 3].each { |e| puts e }
 ```
+
+**Also name the parameter `e` for single-line iterator blocks**
 
 
 #### Prefer `each` over `for` because of their block scope
