@@ -126,10 +126,10 @@ some_hash.each { |_, v| puts v }
 
 ```ruby
 # bad
-{ "February" => 28, "January" => 31 }.each { |k, v| puts k + v }
+{ "two" => 2, "one" => 1 }.each { |k, v| puts k + v }
 
 # good
-{ "January" => 31, "February" => 28 }.each { |k, v| puts k + v }
+{ "one" => 1, "two" => 2 }.each { |k, v| puts k + v }
 ```
 
 
