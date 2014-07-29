@@ -133,7 +133,7 @@ some_hash.each { |_, v| puts v }
 ```
 
 
-#### Never modify while traversing it
+#### Never modify while traversing
 
 ```ruby
 some_hash = { "one" => 1, "two" => 2 }
