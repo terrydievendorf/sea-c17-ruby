@@ -20,6 +20,18 @@ some_array[42]
 ```
 
 
+#### Prefer `size` over `length` and `count`
+
+```ruby
+# bad
+some_array.length
+some_array.count
+
+# good
+some_array.size
+```
+
+
 #### Prefer `{...}` over `do...end` for single-line iterator blocks
 
 ```ruby

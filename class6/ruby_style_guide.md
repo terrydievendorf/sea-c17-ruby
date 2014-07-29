@@ -73,21 +73,6 @@ some_hash["key"]
 ```
 
 
-#### Use `fetch` when keys must be present
-
-```ruby
-some_hash = { "one" => 1, "two" => 2 }
-
-# bad
-some_hash["one"]   #=> 1
-some_hash["twwo"]  #=> nil
-
-# good
-some_hash.fetch("one")   #=> 1
-some_hash.fetch("twwo")  #=> KeyError: key not found: "twwo"
-```
-
-
 #### Prefer `size` over `length` and `count`
 
 ```ruby
