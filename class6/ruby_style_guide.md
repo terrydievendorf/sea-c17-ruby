@@ -122,7 +122,7 @@ some_hash.each { |_, v| puts v }
 ```
 
 
-#### Rely on the fact that Hashes are ordered by insertion
+#### Rely on the insertion order
 
 ```ruby
 # bad
