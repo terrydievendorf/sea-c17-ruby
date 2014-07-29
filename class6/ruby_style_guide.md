@@ -157,7 +157,7 @@ end
 ```
 
 
-#### Never modify while traversing
+#### Never modify while iterating
 
 ```ruby
 some_hash = { "one" => 1, "two" => 2 }
