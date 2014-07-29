@@ -146,7 +146,7 @@ end
 ```
 
 
-#### Rely on the insertion order
+#### Rely on the definition order
 
 ```ruby
 # bad
