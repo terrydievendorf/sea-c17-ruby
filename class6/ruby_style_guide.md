@@ -150,10 +150,10 @@ end
 
 ```ruby
 # bad
-{ "two" => 2, "one" => 1 }.each { |k, v| puts k + v }
+{ "two" => 2, "one" => 1 }.each { |k, v| puts "#{k} is #{v}" }
 
 # good
-{ "one" => 1, "two" => 2 }.each { |k, v| puts k + v }
+{ "one" => 1, "two" => 2 }.each { |k, v| puts "#{k} is #{v}" }
 ```
 
 
