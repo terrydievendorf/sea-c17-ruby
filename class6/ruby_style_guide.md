@@ -97,7 +97,7 @@ end
 { "one" => 1, "two" => 2 }.each { |k, v| puts k + v }
 ```
 
-**Also name the parameters `k` and `v` for single-line iterator blocks**
+**TIP:** Name the parameters `k` and `v` for single-line iterator blocks
 
 
 #### Use `_` for unused block parameters

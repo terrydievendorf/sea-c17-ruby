@@ -44,7 +44,7 @@ end
 [1, 2, 3].each { |e| puts e }
 ```
 
-**Also name the parameter `e` for single-line iterator blocks**
+**TIP:** Name the parameter `e` for single-line iterator blocks
 
 
 #### Prefer `each` over `for` because of their block scope
