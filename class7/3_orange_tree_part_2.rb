@@ -34,6 +34,18 @@
 
 class OrangeTree
   # your code here
+  def initialize
+    @fruit = 50
+  end
+
+  def fruit() Integer
+    @fruit
+  end
+
+  def pick! (amount = 1) Integer or nil
+    return if amount > @fruit
+    @fruit -= amount
+  end
 end
 
 orange_tree = OrangeTree.new

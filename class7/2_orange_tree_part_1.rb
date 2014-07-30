@@ -22,6 +22,13 @@
 
 class OrangeTree
   # your code here
+  def initialize
+    @fruit = 50
+  end
+
+  def fruit() Integer
+    @fruit
+  end
 end
 
 orange_tree = OrangeTree.new

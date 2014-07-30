@@ -40,6 +40,28 @@
 
 class OrangeTree
   # your code here
+  def initialize(fruit = 50)
+    @fruit = fruit
+  end
+
+  def fruit() Integer
+    @fruit
+  end
+
+  def pick! (amount = 1)
+    return if amount > fruit
+    initialize(fruit - amount)
+  end
+
+  def pick (amount = 1) OrangeTree
+    return self if amount > fruit
+    OrangeTree.new(fruit - amount)
+  end
+
+  def == (other)
+    return true if self.fruit == other.fruit
+    return false
+  end
 end
 
 orange_tree = OrangeTree.new
