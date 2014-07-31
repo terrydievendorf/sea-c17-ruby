@@ -31,7 +31,7 @@ To get started, run the following commands:
 ruby-install 2.1.2
 ```
 
-To verify Ruby is installed correctly, run the following command:
+Once it finishes, verify chruby knows it's installed correctly:
 
 ```
 chruby
@@ -40,7 +40,7 @@ chruby
 And you should see:
 
 ```
-   ruby-2.1.2
+ruby-2.1.2
 ```
 
 
@@ -48,13 +48,25 @@ And you should see:
 
 With the latest version of Ruby installed, tell chruby to start using it!
 
-To tell chruby to use the latest version of Ruby, run the following command:
+To do so, run the following command:
 
 ```
 echo '2.1.2' > ~/.ruby-version
 ```
 
-To verify Ruby, run the following command:
+To verify, run the following command:
+
+```
+chruby
+```
+
+You should see:
+
+```
+ * ruby-2.1.2
+```
+
+To double check, run the following command:
 
 ```
 ruby -v
