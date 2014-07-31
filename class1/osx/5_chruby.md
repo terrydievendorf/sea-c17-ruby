@@ -26,7 +26,7 @@ chruby-fish: 0.6.0
 
 To configure chruby, simply integrate it with Fish.
 
-Open up Fish's started up file for editing in Sublime Text:
+Open up Fish's start up file for editing in Sublime Text:
 
 ```
 subl ~/.config/fish/config.fish
@@ -40,7 +40,7 @@ source /usr/local/share/chruby/chruby.fish
 source /usr/local/share/chruby/auto.fish
 ```
 
-Save the file and tell fish to reload it by running the following command:
+Save the file and reload the settings by running the following command:
 
 ```
 source ~/.config/fish/config.fish
