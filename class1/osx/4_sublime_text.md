@@ -99,7 +99,7 @@ You should see:
 /usr/local/bin /usr/bin /bin /usr/sbin /sbin
 ```
 
-Now, the `/usr/local/bin` directory is listed first. This means Fish (and Bash) will prefer Homebrew-installed commands over the pre-installed ones.
+Now, the `/usr/local/bin` directory is listed first. This means Fish (and any shell that leverages `/etc/paths`) will prefer Homebrew-installed commands over the pre-installed ones.
 
 
 ### Create fish_prompt.fish
