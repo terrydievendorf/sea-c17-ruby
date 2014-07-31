@@ -1,12 +1,20 @@
 ### Install ruby-install
 
+Using Homebrew, install another tool called [ruby-install](https://github.com/postmodern/ruby-install). Can you guess what this tool does?
+
+To get started, run the following command:
+
 ```
 brew install ruby-install
 ```
 
+Verify ruby-install was installed correctly:
+
 ```
 ruby-install --version
 ```
+
+You should see:
 
 ```
 ruby-install: 0.4.3
@@ -29,11 +37,24 @@ To verify Ruby is installed correctly, run the following command:
 chruby
 ```
 
-### Default version
+And you should see:
 
 ```
-echo '2.1.2' >> ~/.ruby-version
+   ruby-2.1.2
 ```
+
+
+### Default version
+
+With the latest version of Ruby installed, tell chruby to start using it!
+
+To tell chruby to use the latest version of Ruby, run the following command:
+
+```
+echo '2.1.2' > ~/.ruby-version
+```
+
+To verify Ruby, run the following command:
 
 ```
 ruby -v
