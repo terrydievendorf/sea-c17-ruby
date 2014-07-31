@@ -49,11 +49,33 @@ You should see:
 subl -w
 ```
 
-### Change $PATH globally
+### Change PATH globally
+
+Like most shells, Fish uses the `PATH` environment variable to specify a set of directories where other commands can be found.
+
+To see the contents of the PATH environment variable, run the following command:
+
+```
+echo $PATH
+```
+
+And you should see:
+
+```
+/usr/bin /bin /usr/sbin /sbin /usr/local/bin
+```
+
+In the next sections, you'll use Homebrew to install additional commands. However, you'll want Fish to prefer these Homebrew-installed commands over the pre-installed commands that come with Mac OS X.
+
+To change the `PATH` environment variable, run the following command:
 
 ```
 subl /etc/paths
 ```
+
+This opens the system file called `/etc/paths` for editing in Sublime Text.
+
+Copy and paste the following into the file **replacing everything**:
 
 ```
 /usr/local/bin
@@ -63,13 +85,19 @@ subl /etc/paths
 /sbin
 ```
 
+Save the file and verify the change by running the following command:
+
 ```
 echo $PATH
 ```
 
+You should see:
+
 ```
 /usr/local/bin /usr/bin /bin /usr/sbin /sbin
 ```
+
+Now, the `/usr/local/bin` directory is listed first. This means Fish (and Bash) will prefer Homebrew-installed commands over the pre-installed ones.
 
 
 ### Create fish_prompt.fish
