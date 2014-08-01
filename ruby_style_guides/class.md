@@ -109,7 +109,7 @@ class Person
   end
 
   def name
-    "#{name}-san"
+    "#{@name}-san"
   end
 
   def greet
@@ -127,7 +127,7 @@ class Person
   end
 
   def name
-    "#{name}-san"
+    "#{@name}-san"
   end
 
   def greet
@@ -150,7 +150,7 @@ class Person
   end
 
   def name
-    "#{name}-san"
+    "#{@name}-san"
   end
 
   def greet
@@ -168,7 +168,7 @@ class Person
   end
 
   def name
-    "#{name}-san"
+    "#{@name}-san"
   end
 
   def greet
