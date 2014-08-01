@@ -251,7 +251,7 @@ class Person
 end
 
 person = Person.new("Sierra", 26)
-person.update("Sierra", 27)   #=> Person.new("Sierra", 27)
+sierra = person.update("Sierra", 27)   #=> Person.new("Sierra", 27)
 person.update!("Sierra", 27)  #=> true
 ```
 
