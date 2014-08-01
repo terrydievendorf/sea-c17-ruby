@@ -217,7 +217,7 @@ end
 ```ruby
 # bad
 class Person
-  def new(name, age)
+  def initialize(name, age)
     @name = name
     @age = age
   end
