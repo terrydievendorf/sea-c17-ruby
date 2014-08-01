@@ -16,8 +16,12 @@
 
 def follow_the_execution(&block)
   # your code here
+  puts "Executing the method"
+  #block.call
+  yield
 end
 
 follow_the_execution do
   # your code here
+  puts "Executing the block"
 end

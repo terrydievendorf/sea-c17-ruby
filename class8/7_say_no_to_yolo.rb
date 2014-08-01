@@ -18,4 +18,17 @@
 
 # your code here
 
+class Array
+  def each_without_yolo(&block)
+    index = 0
+    while index < self.size
+      if self[index].upcase == "YOLO"
+        puts "Life is too short"
+      else
+        yield self[index]
+      end
+      index += 1
+    end
+  end
+
 ["OMG", "YOLO", "ROTFL", "yolo", "FTW"].each_without_yolo { |e| puts e }

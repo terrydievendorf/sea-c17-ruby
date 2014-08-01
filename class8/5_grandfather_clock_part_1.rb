@@ -23,6 +23,9 @@
 # the program uses a number that appears on a clock-face. (i.e. 1 to 12)
 
 # your code here
+def grandfather_clock(&block)
+  (Time.new.hour % 12).times(&block)
+end
 
 grandfather_clock do
   puts "DONG!"

@@ -21,6 +21,11 @@
 
 # your code here
 
+def grandfather_clock(str, &block)
+  puts "The hour is #{Time.new.hour % 12}"
+  (Time.new.hour % 12).times {yield(str)}
+end
+
 grandfather_clock("GONGGGGGGG!") do |sound|
   puts sound
 end
