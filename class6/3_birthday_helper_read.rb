@@ -45,21 +45,24 @@
 #     Time.new.utc.strftime("%F")   #=> "2014-07-23"
 
 require 'yaml'
-require 'pp'
 
 name = ARGV.first
 
-if name.nil?
-  puts "Usage: 3_birthday_helper_read.rb NAME"
-  exit
-end
+abort "Usage: 3_birthday_helper_read.rb NAME" unless name
 
-# your code here
-birth_dates = YAML.load_file("birth_dates.yml")
-birth_dates.each do |a_name,date|
-  if a_name == name.capitalize then
-    age = ((Time.now - date) / 365 / 24 / 60 / 60).ceil
-    next_birthday = Time.utc(Time.now.year,date.month,date.day)
-    puts "#{a_name} will be #{age} on #{next_birthday.strftime("%F")}"
-  end
-end
+birth_dates = YAML.load(File.read('birth_dates.yml'))
+
+name = name.capitalize
+bd = birth_dates[name]
+
+abort "Unknown birth date for '#{name}'" unless bd
+
+now = Time.new.utc
+year = now.year
+
+year += 1 if now.month > bd.month || (now.month == bd.month && now.day > bd.day)
+
+age = year - bd.year
+nbd = Time.utc(year, bd.month, bd.day)
+
+puts "#{name} will be #{age} on #{nbd.strftime("%F")}"
