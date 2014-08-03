@@ -64,11 +64,8 @@ month = ARGV[1].to_i
 day = ARGV[2].to_i
 
 if year == 0 || month == 0 || day == 0
-  puts "Usage: 2_happy_birthday.rb YEAR MONTH DAY"
-  exit
+  abort "Usage: 2_happy_birthday.rb YEAR MONTH DAY"
 end
 
-# your code here
 birth_date = Time.utc(year, month, day)
-puts "CHEER!\n" * ((Time.now - birth_date) / (365 * 24 * 60 *60))
-
+puts "CHEER!\n" * ((Time.now - birth_date) / (365 * 24 * 60 * 60))
