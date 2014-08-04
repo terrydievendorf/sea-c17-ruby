@@ -21,12 +21,11 @@
 #     orange_tree.fruit  #=> 50
 
 class OrangeTree
-  # your code here
   def initialize
     @fruit = 50
   end
 
-  def fruit() Integer
+  def fruit
     @fruit
   end
 end
