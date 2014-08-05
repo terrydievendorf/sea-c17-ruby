@@ -15,13 +15,10 @@
 # Hint: Don't over think this one. The simpler the better.
 
 def follow_the_execution(&block)
-  # your code here
   puts "Executing the method"
-  #block.call
-  yield
+  block.call
 end
 
 follow_the_execution do
-  # your code here
   puts "Executing the block"
 end
