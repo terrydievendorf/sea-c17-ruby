@@ -19,11 +19,12 @@
 #     GONGGGGGGG!
 #     GONGGGGGGG!
 
-# your code here
-
 def grandfather_clock(str, &block)
-  puts "The hour is #{Time.new.hour % 12}"
-  (Time.new.hour % 12).times {yield(str)}
+  hour = Time.new.hour % 12
+  hour = 12 if hour == 0
+
+  puts "The hour is #{hour}"
+  hour.times { block.call(str) }
 end
 
 grandfather_clock("GONGGGGGGG!") do |sound|
