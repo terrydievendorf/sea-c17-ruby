@@ -28,16 +28,15 @@
 # do to the number rand returns to you?
 
 puts "HUH?! SPEAK UP, SONNY!"
-response=""
-while response != "BYE"
-  response=gets.chomp
+
+loop do
+  response = gets.chomp
+  break if response == "BYE"
+
   if response == response.upcase
     random_year = rand(21) + 1930
-    puts "NO, NOT SINCE #{random_year}"
+    puts "NO, NOT SINCE #{random_year}!"
   else
     puts "HUH?! SPEAK UP, SONNY!"
   end
 end
-
-
-

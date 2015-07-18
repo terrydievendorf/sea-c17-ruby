@@ -10,16 +10,16 @@
 
 puts 'Indicate a starting year'
 starting_year = gets.chomp.to_i
+
 puts 'Indicate an ending year'
 ending_year = gets.chomp.to_i
+
 index_year = starting_year
 
 while index_year <= ending_year
-  if index_year%4 == 0
-    if index_year%100 != 0 || index_year%400 == 0
-      puts "Leap year: #{index_year}"
-    end
+  if index_year % 4 == 0 && index_year % 100 != 0 || index_year % 400 == 0
+    puts "Leap year: #{index_year}"
   end
+
   index_year += 1
 end
-
