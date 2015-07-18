@@ -11,11 +11,11 @@
 # Chapter 2:  Numbers                        page  9
 # Chapter 3:  Letters                        page 13
 
-# There are various ways to store the data, but this is the way I chose since we 
+# There are various ways to store the data, but this is the way I chose since we
 # haven't covered more sophisticated data structures yet.
 heading = 'Table of Contents'
 chapters = ['Chapter 1: Getting Started','Chapter 2: Numbers','Chapter 3: Letters']
-pages = ['1','9','13'] 
+pages = ['1','9','13']
 
 # Assume TOC is in order so longest page number is the last element of pages
 # Use maxpagenumberchars to ensure appropriate distance between word "page" and page number
@@ -28,6 +28,6 @@ linewidth = chapters.group_by(&:size).max[0] * 2
 puts heading.center linewidth
 
 # Enumerate the chapters and format the output
-chapters.each_with_index do |chapters,index|
+chapters.each_with_index do |chapters, index|
   puts chapters.ljust(linewidth/2) + 'page '.rjust(linewidth/2) + pages[index].rjust(maxpagenumberchars)
 end
