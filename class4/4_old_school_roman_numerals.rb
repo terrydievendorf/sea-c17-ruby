@@ -36,7 +36,6 @@
 #   VIIII
 
 def old_school_roman_numeral(num)
-  # your solution here
   numeral = ''
   numeral += 'M' * (num / 1000)
   numeral += 'D' * (num % 1000 / 500)
